@@ -1,8 +1,9 @@
-//! \see https://github.com/websockets/ws#broadcast-example
-
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 8080 });
+const port = process.argv[2] || 8080;
+
+//! \see https://github.com/websockets/ws#broadcast-example
+const wss = new WebSocket.Server({ port: port });
 
 // Broadcast to all.
 wss.broadcast = function broadcast(data) {
@@ -25,3 +26,5 @@ wss.on('connection', function connection(ws) {
     });
   });
 });
+
+console.log(`Websocket server running on port ${port}`);
