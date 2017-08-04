@@ -18,7 +18,6 @@ npm install polyfill-qml --save-dev
 require('polyfill-qml');
 // or per library
 var WebSocket = require('polyfill-qml/lib/websocket');
-// combine with other polyfill libraries
-require('core-js');
-// now qml rocks!
+// combine with other polyfill libraries. e.g.
+require('core-js/fn/object/set-prototype-of');
 ```
