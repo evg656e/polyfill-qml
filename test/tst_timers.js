@@ -6,9 +6,9 @@ module.exports = {
 
         setTimeout(function() {
             fired = true;
-        }, 10)
+        }, 20)
 
-        test.wait(20);
+        test.wait(40);
         test.verify(fired);
     },
 
@@ -21,9 +21,9 @@ module.exports = {
         setTimeout(function(arg1, arg2) {
             fired = true;
             argsMatched = arg1 === testArg1 && arg2 === testArg2;
-        }, 10, testArg1, testArg2)
+        }, 20, testArg1, testArg2)
 
-        test.wait(20);
+        test.wait(40);
         test.verify(fired && argsMatched);
     },
 
@@ -32,11 +32,11 @@ module.exports = {
 
         var id = setTimeout(function() {
             fired = true;
-        }, 10);
+        }, 20);
 
         clearTimeout(id);
 
-        test.wait(20);
+        test.wait(40);
         test.verify(!fired);
     },
 
@@ -47,9 +47,9 @@ module.exports = {
             count++;
             if (count == 3)
                 clearInterval(id);
-        }, 10)
+        }, 20)
 
-        test.wait(50);
+        test.wait(100);
         test.verify(count == 3);
     },
 
@@ -64,9 +64,9 @@ module.exports = {
             argsMatched = arg1 === testArg1 && arg2 === testArg2;
             if (count === 3)
                 clearInterval(id);
-        }, 10, testArg1, testArg2)
+        }, 20, testArg1, testArg2)
 
-        test.wait(50);
+        test.wait(100);
         test.verify((count === 3) && argsMatched);
     }
 };
