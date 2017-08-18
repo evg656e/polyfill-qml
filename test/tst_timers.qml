@@ -25,4 +25,12 @@ TestCase {
     function test_setIntervalArgs() {
         Test.test_setIntervalArgs(test);
     }
+
+    function test_setTimeoutSimultaneous() {
+        Test.test_setTimeoutSimultaneous(test);
+    }
+
+    function test_setIntervalSimultaneous() {
+        Test.test_setIntervalSimultaneous(test);
+    }
 }
