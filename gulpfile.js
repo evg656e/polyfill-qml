@@ -7,7 +7,7 @@ const { exec, spawn } = require('child_process');
 gulp.task('check-qmltestrunner', function (cb) {
     exec('qmltestrunner -help', function (err) {
         if (err) {
-            console.error('qmltestrunner not found. To run tests add qmltestrunner to environment path first.');
+            console.error('qmltestrunner in not found. To run tests add qmltestrunner to environment path.');
             return cb(err);
         }
         cb();

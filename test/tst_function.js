@@ -1,12 +1,10 @@
 require('../lib/function.js');
 
 function foo() {
-    return 0;
 }
 
 module.exports = {
     test_funcToString: function(test) {
-        var funcStr = foo.toString();
-        test.verify(funcStr.startsWith('function foo('));
+        test.verify(foo.toString().startsWith('function foo('));
     }
 };
