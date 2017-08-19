@@ -1,6 +1,6 @@
 {
   "name": "polyfill-qml",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Polyfills for QML JavaScript host environment",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/evg656e/polyfill-qml"
   },
   "scripts": {
-    "test": "gulp run-tests"
+    "test": "gulp test"
   },
   "keywords": [
     "qml",
