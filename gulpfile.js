@@ -43,7 +43,6 @@ gulp.task('test', ['check-qmltestrunner', 'build-tests'], function (cb) {
         console.log(stdout);
         console.warn(stderr);
         cb(err);
-
         websocketServer.kill();
     });
 });
