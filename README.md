@@ -14,10 +14,10 @@ npm install polyfill-qml --save-dev
 ## Usage
 
 ```javascript
-// load global qml polyfills (setTimeout/clearTimeout/etc, some core fixes)
+// core qml polyfills (currently setTimeout/clearTimeout/etc, Object.setPrototypeOf, Function.prototype.toString fix)
 require('polyfill-qml');
 // or per library
 var WebSocket = require('polyfill-qml/lib/websocket');
 // combine with other polyfill libraries. e.g.
-require('core-js/fn/object/set-prototype-of');
+require('core-js/fn/array/find-index');
 ```

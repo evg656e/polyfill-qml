@@ -1,4 +1,4 @@
-require('../lib/core.js');
+require('../lib/function.js');
 
 function foo() {
     return 0;
