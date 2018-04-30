@@ -15,7 +15,7 @@ wss.broadcast = function broadcast(data) {
 };
 
 wss.on('connection', function connection(ws) {
-    console.log('connection:', ws._ultron.id);
+    console.log('Client connected');
     ws.on('message', function incoming(data) {
         console.log('message:', data);
         // Broadcast to everyone else.

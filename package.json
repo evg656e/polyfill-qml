@@ -1,6 +1,6 @@
 {
   "name": "polyfill-qml",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Polyfills for QML JavaScript host environment",
   "main": "index.js",
   "repository": {
@@ -19,7 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "vinyl-named": "^1.1.0",
-    "webpack-stream": "^3.2.0",
-    "ws": "^3.1.0"
+    "webpack-stream": "^4.0.3",
+    "ws": "^5.1.1"
   }
 }
