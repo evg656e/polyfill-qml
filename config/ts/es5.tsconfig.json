@@ -1,0 +1,8 @@
+{
+  "extends": "./base.tsconfig",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "outDir": "../../stage/es5"
+  }
+}

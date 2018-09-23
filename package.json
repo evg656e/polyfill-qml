@@ -1,6 +1,6 @@
 {
   "name": "polyfill-qml",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Polyfills for QML JavaScript host environment",
   "main": "index.js",
   "repository": {
@@ -8,6 +8,10 @@
     "url": "https://github.com/evg656e/polyfill-qml"
   },
   "scripts": {
+    "clean": "rimraf ./stage ./test/build",
+    "build": "npm run build:esnext && npm run build:es5",
+    "build:es5": "tsc --project ./config/ts/es5.tsconfig.json",
+    "build:esnext": "tsc --project ./config/ts/esnext.tsconfig.json",
     "test": "gulp test"
   },
   "keywords": [
@@ -17,9 +21,12 @@
   "author": "evg656e <evg656e@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "vinyl-named": "^1.1.0",
-    "webpack-stream": "^4.0.3",
-    "ws": "^5.1.1"
+    "@types/events": "latest",
+    "gulp": "latest",
+    "rimraf": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "vinyl-named": "latest",
+    "webpack-stream": "latest"
   }
 }
