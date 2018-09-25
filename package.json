@@ -1,6 +1,6 @@
 {
   "name": "polyfill-qml",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Polyfills for QML JavaScript host environment",
   "main": "index.js",
   "repository": {
