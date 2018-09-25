@@ -11,5 +11,4 @@ package-lock.json
 *.qmlproject.user.*
 
 # Webpack
-build/
 stage/
