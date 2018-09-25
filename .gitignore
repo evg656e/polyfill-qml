@@ -27,3 +27,4 @@ Makefile*
 
 # Webpack
 build/
+stage/
