@@ -53,7 +53,7 @@ function setTimeout(callback: (...args: any[]) => void, delay: number, ...args: 
         callback(...args);
     }
     callbacks[timerId] = callbackWrapper;
-    timer.interval = Math.max(delay, 1); // timer.interval should not be 0 (qt bug?)
+    timer.interval = delay || 1; // timer.interval should not be 0 (qt bug?)
     timer.triggered.connect(callbackWrapper);
     timer.start();
     return timerId;
@@ -70,7 +70,7 @@ function setInterval(callback: (...args: any[]) => void, delay: number, ...args:
         callback(...args);
     }
     callbacks[timerId] = callbackWrapper;
-    timer.interval = Math.max(delay, 1); // timer.interval should not be 0 (qt bug?)
+    timer.interval = delay || 1; // timer.interval should not be 0 (qt bug?)
     timer.triggered.connect(callbackWrapper);
     timer.repeat = true;
     timer.start();
