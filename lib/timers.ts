@@ -5,7 +5,6 @@
     \see http://doc.qt.io/qt-5/qml-qtqml-timer.html
 */
 
-declare const global: any;
 declare const Qt: any;
 declare const QML_MAX_TIMER_COUNT: number;
 declare const QML_IMPORT_TIMER_STATEMENT: string;
@@ -45,7 +44,7 @@ function removeTimer(timerId: number) {
     }
 }
 
-function setTimeout(callback: (...args: any[]) => void, delay: number, ...args: any[]) {
+export function setTimeout(callback: (...args: any[]) => void, delay: number, ...args: any[]) {
     const timer = createTimer();
     const timerId = insertTimer(timer);
     function callbackWrapper() {
@@ -59,11 +58,11 @@ function setTimeout(callback: (...args: any[]) => void, delay: number, ...args: 
     return timerId;
 }
 
-function clearTimeout(timerId: number) {
+export function clearTimeout(timerId: number) {
     removeTimer(timerId);
 }
 
-function setInterval(callback: (...args: any[]) => void, delay: number, ...args: any[]) {
+export function setInterval(callback: (...args: any[]) => void, delay: number, ...args: any[]) {
     const timer = createTimer();
     const timerId = insertTimer(timer);
     function callbackWrapper() {
@@ -77,11 +76,6 @@ function setInterval(callback: (...args: any[]) => void, delay: number, ...args:
     return timerId;
 }
 
-function clearInterval(timerId: number) {
+export function clearInterval(timerId: number) {
     removeTimer(timerId);
 }
-
-global.setTimeout = setTimeout;
-global.clearTimeout = clearTimeout;
-global.setInterval = setInterval;
-global.clearInterval = clearInterval;

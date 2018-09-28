@@ -166,7 +166,7 @@ function shorthand(fn: (event: Event) => any) {
                     return listeners[i];
         },
         set(this: WebSocket, listener: (event: Event) => void) {
-            const listeners = this.listeners(event);
+            const listeners = this.listeners(event) as ((event: Event) => void)[];
             for (let i = 0; i < listeners.length; i++)
                 if ((<Shorthand>listeners[i]).shorthand)
                     this.removeEventListener(event, listeners[i]);

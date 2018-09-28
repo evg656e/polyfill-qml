@@ -1,4 +1,4 @@
-import '../lib/timers';
+import '../lib/push/timers';
 
 export function test_setTimeout(test: any) {
     let fired = false;
@@ -17,7 +17,7 @@ export function test_setTimeoutArgs(test: any) {
     const testArg1 = "foo";
     const testArg2 = 123;
 
-    setTimeout(function (arg1, arg2) {
+    setTimeout(function (arg1: string, arg2: number) {
         fired = !fired;
         argsMatched = arg1 === testArg1 && arg2 === testArg2;
     }, 20, testArg1, testArg2)
@@ -58,7 +58,7 @@ export function test_setIntervalArgs(test: any) {
     const testArg1 = "foo";
     const testArg2 = 123;
 
-    const id = setInterval(function (arg1, arg2) {
+    const id = setInterval(function (arg1: string, arg2: number) {
         count++;
         argsMatched = arg1 === testArg1 && arg2 === testArg2;
         if (count === 3)

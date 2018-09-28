@@ -1,1 +1,1 @@
-import './stage/es5/index';
+import './stage/es5/push/index';

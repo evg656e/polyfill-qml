@@ -1,4 +1,4 @@
-import '../lib/object';
+import '../lib/push/object';
 
 export function test_setPrototypeOf(test: any) {
     const proto = {

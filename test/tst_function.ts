@@ -1,4 +1,4 @@
-import '../lib/function';
+import '../lib/push/function';
 
 function foo() { }
 

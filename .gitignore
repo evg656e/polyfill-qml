@@ -13,3 +13,6 @@ package-lock.json
 # Webpack
 build/
 stage/
+
+# VS Code
+.vscode/
