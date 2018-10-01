@@ -1,4 +1,4 @@
-import { WebSocket } from '../lib/websocket';
+import '../lib/push/websocket';
 
 export function test_WebSocket(test: any) {
     test.verify(typeof WebSocket === 'function');
